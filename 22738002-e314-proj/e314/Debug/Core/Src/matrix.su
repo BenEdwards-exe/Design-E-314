@@ -1,0 +1,15 @@
+matrix.c:175:6:light_up_LED	16	static
+matrix.c:180:6:reset_all_ports	24	static
+matrix.c:199:6:reset_debug_leds	16	static
+matrix.c:206:6:light_debug_led	16	static
+matrix.c:226:6:copy_to_display	24	static
+matrix.c:236:6:load_preset_maze	24	static
+matrix.c:257:6:load_preset_num_to_display	16	static
+matrix.c:268:6:increment_column	4	static
+matrix.c:278:6:display_matrix	24	static
+matrix.c:335:9:checkMazeBallMove	24	static
+matrix.c:367:6:move_ball_maze_imu	16	static
+matrix.c:385:9:checkBatMove	24	static
+matrix.c:407:6:move_bat_imu	16	static
+matrix.c:425:6:move_tennis_ball	24	static
+matrix.c:583:6:update_imu_direction	24	static

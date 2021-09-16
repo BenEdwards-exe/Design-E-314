@@ -1,0 +1,27 @@
+/*
+ * matrix.c
+ *
+ *  Created on: Apr 15, 2021
+ *      Author: BAREND JACOBUS Edwards
+ */
+
+// Includes
+#include "matrix.h"
+#include "main.h"
+
+
+// Function Definitions
+void light_up_LED(uint8_t x, uint8_t y) {
+	HAL_GPIO_WritePin(row_ports[y], row_pins[y], GPIO_PIN_SET);
+	HAL_GPIO_WritePin(col_ports[x], col_pins[x], GPIO_PIN_SET);
+}
+
+void reset_all_ports() {
+
+	for (int i = 0; i < 8; ++i) {
+		HAL_GPIO_WritePin(row_ports[i], row_pins[i], GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(col_ports[i], col_pins[i], GPIO_PIN_RESET);
+	}
+
+}
+

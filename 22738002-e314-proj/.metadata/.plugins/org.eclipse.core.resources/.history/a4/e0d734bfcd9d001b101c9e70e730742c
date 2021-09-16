@@ -1,0 +1,17 @@
+/*
+ * matrix.c
+ *
+ *  Created on: Apr 15, 2021
+ *      Author: BAREND JACOBUS Edwards
+ */
+
+// Includes
+#include "matrix.h"
+#include "main.h"
+
+
+// Function Definitions
+void light_up_LED(uint8_t row, uint8_t col) {
+
+}
+

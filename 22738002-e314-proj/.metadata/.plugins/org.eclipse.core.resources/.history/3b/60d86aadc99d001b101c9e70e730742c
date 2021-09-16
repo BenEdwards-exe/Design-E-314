@@ -1,0 +1,16 @@
+/*
+ * preset_matricies.h
+ *
+ *  Created on: Apr 15, 2021
+ *      Author: BAREND JACOBUS Edwards
+ */
+
+#ifndef INC_PRESET_MATRICIES_H_
+#define INC_PRESET_MATRICIES_H_
+
+static const uint8_t init_sequences[8][8];
+// HAL_GPIO_WritePin(GPIO_TypeDef*, uint16_t GPIO_Pin, GPIO_PinState PinState)
+static const GPIO_TypeDef[] g;
+
+
+#endif /* INC_PRESET_MATRICIES_H_ */

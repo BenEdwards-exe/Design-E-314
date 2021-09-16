@@ -1,0 +1,55 @@
+/*
+ * preset_matricies.h
+ *
+ *  Created on: Apr 15, 2021
+ *      Author: BAREND JACOBUS Edwards
+ */
+
+#ifndef INC_MATRIX_H_
+#define INC_MATRIX_H_
+
+// Includes
+#include "main.h"
+
+
+// Defines
+
+
+// Function Prototypes
+void light_up_LED(uint8_t x, uint8_t y);
+void reset_all_ports(uint8_t isBallSkipped);
+
+
+
+// Variables
+static enum {
+	CALIBRATION,
+	CORNERS,
+	BALL
+} matrixStatus;
+
+
+
+static GPIO_TypeDef* row_ports[] = {
+		row_0_GPIO_Port, row_1_GPIO_Port, row_2_GPIO_Port, row_3_GPIO_Port,
+		row_4_GPIO_Port, row_5_GPIO_Port, row_6_GPIO_Port, row_7_GPIO_Port
+};
+
+static uint16_t row_pins[] = {
+		row_0_Pin, row_1_Pin, row_2_Pin, row_3_Pin,
+		row_4_Pin, row_5_Pin, row_6_Pin, row_7_Pin
+};
+
+static GPIO_TypeDef* col_ports[] = {
+		col_0_GPIO_Port, col_1_GPIO_Port, col_2_GPIO_Port, col_3_GPIO_Port,
+		col_4_GPIO_Port, col_5_GPIO_Port, col_6_GPIO_Port, col_7_GPIO_Port
+};
+
+static uint16_t col_pins[] = {
+		col_0_Pin, col_1_Pin, col_2_Pin, col_3_Pin,
+		col_4_Pin, col_5_Pin, col_6_Pin, col_7_Pin
+};
+
+
+
+#endif /* INC_MATRIX_H_ */

@@ -1,0 +1,33 @@
+16:45:49 **** Incremental Build of configuration Debug for project e314 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:26:0:
+../Core/Inc/matrix.h:48:17: warning: 'col_pins' defined but not used [-Wunused-variable]
+ static uint16_t col_pins[] = {
+                 ^~~~~~~~
+../Core/Inc/matrix.h:43:22: warning: 'col_ports' defined but not used [-Wunused-variable]
+ static GPIO_TypeDef* col_ports[] = {
+                      ^~~~~~~~~
+../Core/Inc/matrix.h:38:17: warning: 'row_pins' defined but not used [-Wunused-variable]
+ static uint16_t row_pins[] = {
+                 ^~~~~~~~
+../Core/Inc/matrix.h:33:22: warning: 'row_ports' defined but not used [-Wunused-variable]
+ static GPIO_TypeDef* row_ports[] = {
+                      ^~~~~~~~~
+arm-none-eabi-gcc -o "e314.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\benjr\Documents\University\Third Year 2021\Semester 1\Design(E)_314\22738002-e314-proj\e314\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="e314.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: e314.elf
+ 
+arm-none-eabi-objdump -h -S  e314.elf  > "e314.list"
+arm-none-eabi-objcopy  -O binary  e314.elf  "e314.bin"
+arm-none-eabi-size   e314.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10928	    156	   1772	  12856	   3238	e314.elf
+Finished building: default.size.stdout
+ 
+Finished building: e314.bin
+ 
+Finished building: e314.list
+ 
+
+16:45:52 Build Finished. 0 errors, 4 warnings. (took 2s.498ms)
+
